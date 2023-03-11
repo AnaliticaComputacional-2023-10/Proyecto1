@@ -13,7 +13,7 @@ import plotly.express as px
 import json
 import random
 
-dash.register_page(__name__,path='/hownnlearns',title="How neural network learns",description="How neural network learns",image='logo2.png')
+dash.register_page(__name__,path='/hownnlearns',title="How neural network learns",description="How neural network learns",image='logo.png')
 
 breadcrumb=dbc.Container(
     dbc.Row(
