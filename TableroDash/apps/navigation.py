@@ -9,7 +9,7 @@ navbar = dbc.Navbar(
                     dbc.Row([
                         dbc.Col([
                             html.Img(src=dash.get_asset_url('logo.png'), height="40px"),
-                            dbc.NavbarBrand("Predicción de Enfermedades Cardiacas", className="ms-2")
+                            dbc.NavbarBrand("Predicción de Enfermedades Cardíacas", className="ms-2")
                         ],
                         width={"size":"auto"})
                     ],

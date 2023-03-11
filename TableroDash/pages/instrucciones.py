@@ -5,5 +5,7 @@ from apps import navigation
 
 instrucciones_layout = html.Div(children=[
     navigation.navbar,
-    html.H1(children = "Aca encontrara las instrucciones para utilizar la aplicación")
+    html.Br(),
+    html.H1(children = "Instrucciones para usar el Programa",
+            style={'textAlign': 'center'})
 ])
