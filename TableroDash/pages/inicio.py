@@ -5,5 +5,6 @@ from apps import navigation
 
 inicio_layout = html.Div(children=[
     navigation.navbar,
-    html.H1(children = "Bienvenido al Programa de Predicción de Enfermedades Cardíacas")
+    html.Br(),
+    html.H1(children = "Bienvenido al Programa de Predicción de Enfermedades Cardíacas", style={'textAlign': 'center'})
 ])
