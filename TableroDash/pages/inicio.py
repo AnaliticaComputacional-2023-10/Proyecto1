@@ -9,7 +9,7 @@ inicio_layout = html.Div(children=[
     html.H1(children = "Bienvenido al Programa de Predicción de Enfermedades Cardíacas",
             style={'textAlign': 'center'}),
     html.Br(),
-    html.Div(children='Dash: A web application framework for your data.', style={
+    html.Div(children='Está aplicación ha sido creada por Santiago González y Juliana Cárdenas', style={
         'textAlign': 'center'
     }),
     html.Br()
