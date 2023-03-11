@@ -1,9 +1,10 @@
 import dash
-#import dash_html_components as html
-#import dash_core_components as dcc #Para los inputs
+import dash_bootstrap_components as dbc
+#from dash import html
+#from dash import dcc
 #from dash.dependencies import Input, Output #callback
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MORPH])
 server = app.server
 
 #url_contente_layout = html.Div(children=[
