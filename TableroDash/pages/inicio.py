@@ -15,20 +15,19 @@ inicio_layout = html.Div(children=[
     }),
     html.Br(),
     html.Div(children=[
-        dbc.Button("Instrucciones", size="lg", id="inicio_instrucciones",href="/instrucciones",
-                   style={'margin-left': '620px',
-                            'margin-bottom': '10px',
-                            'verticalAlign': 'middle'})
-        ]),
-    html.Br(),
-    html.Div(children=[
-        dbc.Button("Programa", size="lg", id="inicio_programa",href="/programa",
-                   style={'margin-left': '635px',
-                            'margin-bottom': '10px',
-                            'verticalAlign': 'middle'})
-        ]),
-    html.Div(children='Está aplicación ha sido creada por Santiago González y Juliana Cárdenas', style={
+        html.Div(children=[
+            dbc.Button("Instrucciones", size="lg", id="inicio_instrucciones", href="/instrucciones",                   style={'margin-right': '10px', 'verticalAlign': 'middle'})        ],
+            style={'display': 'inline-flex'}
+        ),
+        html.Div(children=[
+            dbc.Button("Programa", size="lg", id="inicio_programa", href="/programa",                   style={'margin-left': '10px', 'verticalAlign': 'middle'})        ],
+            style={'display': 'inline-flex'}
+        )
+    ], style={'margin-bottom': '10px',
+              'display': 'flex',
+              'justify-content': 'center'}),
+    html.Div(children='Aplicación creada por Santiago González y Juliana Cárdenas', style={
         'textAlign': 'center'
-    }),
-    html.Br()
+    })
 ])
+
