@@ -17,7 +17,7 @@ redes bayesianas, con el fin de descubrir la relación entre 14 atributos releva
 de datos de enfermedades cardíacas de Cleveland. Los datos se recopilaron del repositorio de la
 Universidad de California en Irvine.'''
 
-texto3 = 'Aplicación creada por Santiago González y Juliana Cárdenas'
+texto3 = 'Aplicación creada por Santiago González y Juliana Cárdenas.'
 
 inicio_layout = html.Div(children=[
     navigation.navbar,
