@@ -5,43 +5,282 @@ from apps import navigation
 from app import app
 import dash_bootstrap_components as dbc
 
-options = [
-    {'label': 'Edad', 'value': 'age'},
-    {'label': 'Sexo', 'value': 'sex'},
-    {'label': 'Tipo de dolor en el pecho', 'value': 'cp'},
-    {'label': 'Presión arterial en reposo', 'value': 'trestbps'},
-    {'label': 'Colesterol sérico', 'value': 'chol'},
-    {'label': 'Azúcar en sangre en ayunas', 'value': 'fbs'},
-    {'label': 'Resultados electrocardiográficos en reposo', 'value': 'restecg'},
-    {'label': 'Frecuencia cardíaca máxima alcanzada', 'value': 'thalach'},
-    {'label': 'Angina inducida por el ejercicio', 'value': 'exang'},
-    {'label': 'Depresión del ST del pico anterior inducida por el ejercicio en relación con el reposo', 'value': 'oldpeak'},
-    {'label': 'Pendiente del segmento ST de ejercicio máximo', 'value': 'slope'},
-    {'label': 'Número de vasos principales coloreados por fluoroscopia', 'value': 'ca'},
-    {'label': 'Talasemia', 'value': 'thal'}
-]
-
 instrucciones_layout = html.Div(children=[
     navigation.navbar,
     html.Br(),
     html.H1(children = "Instrucciones para usar el Programa",
             style={'textAlign': 'center'}),
     html.Br(),
-    #Selección de variables
-    html.Div([
-        html.Label('Seleccione una variable:'),
-        dcc.Dropdown(
-            id='variable-dropdown',
-            options=options,
-            value=''
-        )
-    ], style={'width': '50%', 'display': 'inline-block','margin-right':'20px 0'}),
-    html.Div([
-        html.Label('Que debe hacer en el programa:'),
-        html.Div(id='output')
-    ], style={'width': '50%', 'display': 'inline-block','margin-left':'20px 0'}),
-    html.Br(),
-    #Botones para ir de la pagina de inicio a las instrucciones y programa
+
+    #Primera fila
+
+    html.Div(
+        dbc.Row(
+            [
+                #Edad
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Edad"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4",
+                ),
+                #Sexo
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Sexo"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4"
+                ),
+                #Tipo de dolor en el pecho
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Tipo de dolor en el pecho"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4"
+                ),
+            ],
+            className="mt-4",
+        ),
+        style={'display': 'flex',
+              'justify-content': 'center'}
+    ),
+
+    #Segunda fila
+
+    html.Div(
+        dbc.Row(
+            [
+                #Presión arterial en reposo
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Presión arterial en reposo"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4",
+                ),
+                #Colesterol sérico
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Colesterol sérico"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4"
+                ),
+                #Azúcar en sangre en ayunas
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Azúcar en sangre en ayunas"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4"
+                ),
+            ],
+            className="mt-4",
+        ),
+        style={'display': 'flex',
+              'justify-content': 'center'}
+    ),
+
+    #Tercera fila
+
+    html.Div(
+        dbc.Row(
+            [
+                #Resultados electrocardiográficos en reposo
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Resultados electrocardiográficos en reposo"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4",
+                ),
+                #Frecuencia cardíaca máxima alcanzada
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Frecuencia cardíaca máxima alcanzada"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4"
+                ),
+                #Angina inducida por el ejercicio
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Angina inducida por el ejercicio"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4"
+                ),
+            ],
+            className="mt-4",
+        ),
+        style={'display': 'flex',
+              'justify-content': 'center'}
+    ),
+
+    #Cuarta fila
+
+    html.Div(
+        dbc.Row(
+            [
+                #Depresión del ST del pico anterior inducida por el ejercicio en relación con el reposo
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Depresión del ST del pico anterior inducida por el ejercicio en relación con el reposo"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4",
+                ),
+                #Pendiente del segmento ST de ejercicio máximo
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="FPendiente del segmento ST de ejercicio máximo"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4"
+                ),
+                #Número de vasos principales coloreados por fluoroscopia
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Número de vasos principales coloreados por fluoroscopia"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4"
+                ),
+            ],
+            className="mt-4",
+        ),
+        style={'display': 'flex',
+              'justify-content': 'center'}
+    ),
+
+    #Quinta fila
+
+    html.Div(
+        dbc.Row(
+            [
+                #Talasemia
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardImg(src='/assets/img1.png',
+                                    style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
+                                    top=True),
+                        dbc.CardBody([
+                            dbc.Accordion(
+                                dbc.AccordionItem([
+                                html.P("This is the content of the first section")],
+                            title="Talasemia"),
+                            start_collapsed=True)
+                        ]
+                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    className="mb-4",
+                ),
+            ],
+            className="mt-4",
+        ),
+        style={'display': 'flex',
+              'justify-content': 'center'}
+    ),
+
+    #Botones para ir de la pagina del programa
     html.Br(),
     html.Div(children=[
         html.Div(children=[
@@ -51,37 +290,5 @@ instrucciones_layout = html.Div(children=[
         style={'margin-bottom': '10px',
               'display': 'flex',
               'justify-content': 'center'})
-])
 
-@app.callback(Output('output', 'children'), [Input('variable-dropdown', 'value')])
-def update_output(value):
-    # Aquí es donde se realiza el cálculo correspondiente a la variable seleccionada
-    if value == 'age':
-        result = 'Resultado de la edad'
-    elif value == 'sex':
-        result = 'Resultado del sexo'
-    elif value == 'cp':
-        result = 'Resultado del tipo de dolor en el pecho'
-    elif value == 'trestbps':
-        result = 'Resultado de la presión arterial en reposo'
-    elif value == 'chol':
-        result = 'Resultado del colesterol sérico'
-    elif value == 'fbs':
-        result = 'Resultado del azúcar en sangre en ayunas'
-    elif value == 'restecg':
-        result = 'Resultado de los resultados electrocardiográficos en reposo'
-    elif value == 'thalach':
-        result = 'Resultado de la frecuencia cardíaca máxima alcanzada'
-    elif value == 'exang':
-        result = 'Resultado de la angina inducida por el ejercicio'
-    elif value == 'oldpeak':
-        result = 'Resultado de la depresión del ST del pico anterior inducida por el ejercicio en relación con el reposo'
-    elif value == 'slope':
-        result = 'Resultado de la pendiente del segmento ST de ejercicio máximo'
-    elif value == 'ca':
-        result = 'Resultado del número de vasos principales coloreados por fluoroscopia'
-    elif value == 'thal':
-        result = 'Resultado de la talasemia'
-    else:
-        result = 'Selecciona una variable'
-    return result
+])

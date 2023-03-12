@@ -3,6 +3,8 @@ from dash import dcc
 from dash.dependencies import Input, Output
 from apps import navigation
 from app import app
+import dash_bootstrap_components as dbc
+import dash_daq as daq
 
 programa_layout = html.Div(children=[
     navigation.navbar,
@@ -11,21 +13,17 @@ programa_layout = html.Div(children=[
             style={'textAlign': 'center'}),
     html.Br(),
     #Columnas
-    html.Div([
-    html.Div(children=[
-        html.Label('Dropdown')
-    ], style={'padding': 10, 'flex': 1}),
-
-    html.Div(children=[
-        html.Label('Checkboxes'),
-        html.Br(),
-        html.Label('Slider'),
-        dcc.Slider(
-            min=0,
-            max=9,
-            marks={i: f'Label {i}' if i == 1 else str(i) for i in range(1, 6)},
-            value=5,
+    html.Div(
+    [dbc.Row(
+            [
+                dbc.Col(
+                    html.Div("One of three columns")
+                    ),
+                dbc.Col(html.Div("One of three columns")),
+                dbc.Col(html.Div("One of three columns")),
+            ]
         ),
-    ], style={'padding': 10, 'flex': 1})
-], style={'display': 'flex', 'flex-direction': 'row'})
+    ]
+)
+
 ])
