@@ -5,13 +5,17 @@ from apps import navigation
 import dash_bootstrap_components as dbc
 
 texto = '''Las enfermedades cardíacas son una de las principales causas de muerte en todo el mundo.
-Estas enfermedades afectan al corazón y al sistema circulatorio, lo que puede llevar a
-complicaciones graves, como ataques cardíacos y accidentes cerebrovasculares.
-El siguiente programa ha sido desarrollado como apoyo a médicos en el proceso de evaluación
-de pacientes para detectar si una persona tiene o no una enfermedad cardíaca y la toma de 
-decisiones asociada como solicitud de exámenes, chequeos y otros procedimientos.'''
+Estas enfermedades afectan al corazón y al sistema circulatorio, lo que puede llevar a complicaciones
+graves, como ataques cardíacos y accidentes cerebrovasculares.
 
-texto2 = '''Por medio de la base de datos '''
+El siguiente programa ha sido desarrollado como apoyo a médicos en el proceso de evaluación de
+pacientes para detectar si una persona tiene o no una enfermedad cardíaca y la toma de decisiones
+asociada como solicitud de exámenes, chequeos y otros procedimientos.'''
+
+texto2 = '''Este programa se ha desarrollado mediante la exploración de datos y el modelado con
+redes bayesianas, con el fin de descubrir la relación entre 14 atributos relevantes en la base
+de datos de enfermedades cardíacas de Cleveland. Los datos se recopilaron del repositorio de la
+Universidad de California en Irvine.'''
 
 texto3 = 'Aplicación creada por Santiago González y Juliana Cárdenas'
 
@@ -35,7 +39,7 @@ inicio_layout = html.Div(children=[
     style={'display': 'flex',
            'align-items': 'center',
            'justify-content': 'flex-start',
-           'margin-left': '300px'}),
+           'margin-left': '280px'}),
     html.Br(),
     #Botones para ir de la pagina de inicio a las instrucciones y programa
     html.Div(children=[

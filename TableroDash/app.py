@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 #from dash import dcc
 #from dash.dependencies import Input, Output #callback
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MORPH])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA])
 server = app.server
 
 #url_contente_layout = html.Div(children=[
