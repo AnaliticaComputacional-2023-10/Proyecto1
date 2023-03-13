@@ -20,7 +20,7 @@ instrucciones_layout = html.Div(children=[
                 #Edad
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/edad.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -36,7 +36,7 @@ instrucciones_layout = html.Div(children=[
                 #Sexo
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/sexo.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -52,7 +52,7 @@ instrucciones_layout = html.Div(children=[
                 #Tipo de dolor en el pecho
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/dolor.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -80,7 +80,7 @@ instrucciones_layout = html.Div(children=[
                 #Presión arterial en reposo
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/presion.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -96,7 +96,7 @@ instrucciones_layout = html.Div(children=[
                 #Colesterol sérico
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/colesterol.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -112,7 +112,7 @@ instrucciones_layout = html.Div(children=[
                 #Azúcar en sangre en ayunas
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/glucosa.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -140,7 +140,7 @@ instrucciones_layout = html.Div(children=[
                 #Resultados electrocardiográficos en reposo
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/electro.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -156,7 +156,7 @@ instrucciones_layout = html.Div(children=[
                 #Frecuencia cardíaca máxima alcanzada
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/frec.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -172,7 +172,7 @@ instrucciones_layout = html.Div(children=[
                 #Angina inducida por el ejercicio
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/ejercicio.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -200,7 +200,7 @@ instrucciones_layout = html.Div(children=[
                 #Depresión del ST del pico anterior inducida por el ejercicio en relación con el reposo
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/electro2.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -216,7 +216,7 @@ instrucciones_layout = html.Div(children=[
                 #Pendiente del segmento ST de ejercicio máximo
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/electro3.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -232,7 +232,7 @@ instrucciones_layout = html.Div(children=[
                 #Número de vasos principales coloreados por fluoroscopia
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/vasos.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
@@ -260,7 +260,7 @@ instrucciones_layout = html.Div(children=[
                 #Talasemia
                 dbc.Col(
                     dbc.Card([
-                        dbc.CardImg(src='/assets/img1.png',
+                        dbc.CardImg(src='/assets/thal.png',
                                     style={'height': '50%', 'width': '50%','display': 'block', 'margin': 'auto', 'align-self': 'center'},
                                     top=True),
                         dbc.CardBody([
