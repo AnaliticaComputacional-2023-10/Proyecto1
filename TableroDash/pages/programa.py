@@ -25,7 +25,7 @@ programa_layout = html.Div(children=[
                     dcc.Input(
                         type="number",
                         debounce=True,
-                        value='55',
+                        value='',
                         id='age'
                     )
                 ]), width={"size": 3}),
@@ -36,7 +36,7 @@ programa_layout = html.Div(children=[
                             {'label': 'Mujer', 'value': '0'},
                             {'label': 'Hombre', 'value': '1'}
                         ],
-                        value='0',
+                        value='',
                         id='sex_male'
                     )
                 ]), width={"size": 3},style={'margin-left':'50px'}),
@@ -182,7 +182,7 @@ programa_layout = html.Div(children=[
     html.Br(),
     html.Div(children=[
             dbc.Button(
-                    "Predictive model information",
+                    "Predecir Modelo",
                     id="collapse-button",
                     className="mb-3",
                     color="primary",
