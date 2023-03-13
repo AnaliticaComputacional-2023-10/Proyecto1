@@ -24,8 +24,7 @@ inicio_layout = html.Div(children=[
     html.Br(),
 
     #Titulo de la pagina
-    html.H1(children = '''Bienvenido al Programa de Predicción de 
-                        Enfermedades Cardíacas''',
+    html.H1(children = '''Bienvenido al Programa de Predicción de Enfermedades Cardíacas''',
             style={'textAlign': 'center'}),
     html.Br(),
 
