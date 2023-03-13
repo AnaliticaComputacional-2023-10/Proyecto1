@@ -5,6 +5,53 @@ from apps import navigation
 from app import app
 import dash_bootstrap_components as dbc
 
+tipo = '''Ingrese el tipo de dolor que
+presenta el paciente.
+
+Angina típica: Dolor o molestia
+en el pecho que puede sentirse
+como una presión, opresión,
+quemazón o dolor agudo en el
+centro del pecho. La duración
+del dolor es generalmente breve
+y dura entre 1 y 5 minutos. El
+dolor se desencadena por una
+actividad física o emocional
+específica. El dolor mejora con
+el reposo o la disminución de
+la actividad.
+
+Angina atípica: Dolor o molestia
+que puede sentirse como una
+sensación de ardor, opresión o
+presión en el pecho. El dolor no
+esta solamente localizado en el
+centro del pecho, sino en otras
+áreas, como la mandíbula, el
+cuello, la espalda, los brazos
+o el estómago. El dolor dura más
+de 5 minutos, es constante o
+intermitente, y no está relacio-
+nado con la actividad física.
+
+No anginoso: El dolor se siente
+en diferentes áreas del pecho,
+como en el lado izquierdo,
+derecho o en el centro del pecho.
+El dolor puede sentirse como una
+sensación de presión hasta un
+dolor punzante.La duración
+del dolor es de pocos segundos
+hasta 2 minutos.No está relacio-
+nado con la actividad física.
+
+Asintomático: No presenta dolor
+en el pecho.
+'''
+
+resultados = ''' fiusbfidvnnvsd
+'''
+
 instrucciones_layout = html.Div(children=[
     navigation.navbar,
     html.Br(),
@@ -26,11 +73,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.P("Ingrese la edad del paciente en años.")],
                             title="Edad"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4",
                 ),
                 #Sexo
@@ -42,11 +89,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.P("Ingrese el sexo del paciente(Hombre o Mujer).")],
                             title="Sexo"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4"
                 ),
                 #Tipo de dolor en el pecho
@@ -58,11 +105,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.Pre(tipo)],
                             title="Tipo de dolor en el pecho"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4"
                 ),
             ],
@@ -86,11 +133,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.P("Ingrese la presión arterial del paciente en mmHg.")],
                             title="Presión arterial en reposo"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4",
                 ),
                 #Colesterol sérico
@@ -102,11 +149,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.P("Ingrese el colesterol serico del paciente en mg/dl.")],
                             title="Colesterol sérico"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4"
                 ),
                 #Azúcar en sangre en ayunas
@@ -118,11 +165,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.P("Ingrese el azúcar en sangre en ayunas del paciente en mg/dl.")],
                             title="Azúcar en sangre en ayunas"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4"
                 ),
             ],
@@ -146,11 +193,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.Pre(resultados)],
                             title="Resultados electrocardiográficos en reposo"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4",
                 ),
                 #Frecuencia cardíaca máxima alcanzada
@@ -162,11 +209,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.P("Frecuencia cardíaca máxima alcanzada por en paciente en bpm")],
                             title="Frecuencia cardíaca máxima alcanzada"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4"
                 ),
                 #Angina inducida por el ejercicio
@@ -178,11 +225,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.P("El dolor en el pecho que presenta el paciente se desencadena por una actividad física")],
                             title="Angina inducida por el ejercicio"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4"
                 ),
             ],
@@ -210,7 +257,7 @@ instrucciones_layout = html.Div(children=[
                             title="Depresión del ST del pico anterior inducida por el ejercicio en relación con el reposo"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4",
                 ),
                 #Pendiente del segmento ST de ejercicio máximo
@@ -223,10 +270,10 @@ instrucciones_layout = html.Div(children=[
                             dbc.Accordion(
                                 dbc.AccordionItem([
                                 html.P("This is the content of the first section")],
-                            title="FPendiente del segmento ST de ejercicio máximo"),
+                            title="Pendiente del segmento ST de ejercicio máximo"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4"
                 ),
                 #Número de vasos principales coloreados por fluoroscopia
@@ -238,11 +285,11 @@ instrucciones_layout = html.Div(children=[
                         dbc.CardBody([
                             dbc.Accordion(
                                 dbc.AccordionItem([
-                                html.P("This is the content of the first section")],
+                                html.P("Número de vasos sanguineos coloreados por fluoroscopia que presenta el paciente.")],
                             title="Número de vasos principales coloreados por fluoroscopia"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4"
                 ),
             ],
@@ -270,7 +317,7 @@ instrucciones_layout = html.Div(children=[
                             title="Talasemia"),
                             start_collapsed=True)
                         ]
-                    )], style={"width": "22rem"}, color="primary", outline=True),
+                    )], style={"width": "23rem"}, color="primary", outline=True),
                     className="mb-4",
                 ),
             ],

@@ -33,8 +33,8 @@ programa_layout = html.Div(children=[
                     html.Label('Sexo: '),
                     dcc.Dropdown(
                         options=[
-                            {'label': 'Mujer', 'value': '0'},
-                            {'label': 'Hombre', 'value': '1'}
+                            {'label': 'Hombre', 'value': '1'},
+                            {'label': 'Mujer', 'value': '0'}
                         ],
                         value='',
                         id='sex_male'
@@ -49,7 +49,7 @@ programa_layout = html.Div(children=[
                     dcc.Input(
                         type="number",
                         debounce=True,
-                        value='132',
+                        value='',
                         id='resting_bp'
                     )
                 ]), width={"size": 3}, style={'padding': '10px 10px'}),
@@ -58,28 +58,26 @@ programa_layout = html.Div(children=[
                     dcc.Input(
                         type="number",
                         debounce=True,
-                        value='151',
+                        value='',
                         id='maximum_hr'
                     )
                 ]), width={"size": 3}, style={'padding': '10px 50px'}),
                 dbc.Col(html.Div([
-                    html.Label('Colesterol sérico (mg/L): '),
+                    html.Label('Colesterol sérico (mg/dL): '),
                     dcc.Input(
                         type="number",
                         debounce=True,
-                        value='247',
+                        value='',
                         id='serum_cholesterol'
                     )
                 ]), width={"size": 3}, style={'padding': '10px 90px'}),
                 dbc.Col(html.Div([
                     html.Label('Azúcar en sangre en ayunas: '),
-                    dcc.Dropdown(
-                        options=[
-                            {'label': 'Si', 'value': '1'},
-                            {'label': 'No', 'value': '0'}
-                        ],
-                        value='1',
-                        id='high_fasting_blood_sugar_no'
+                    dcc.Input(
+                        type="number",
+                        debounce=True,
+                        value='',
+                        id='fasting_blood_sugar'
                     )
                 ]), width={"size": 3}, style={'padding': '10px 10px'}),
             ], style={'padding': '10px 25px'}),
@@ -88,11 +86,12 @@ programa_layout = html.Div(children=[
                     html.Label('Tipo de dolor en el pecho: '),
                     dcc.Dropdown(
                         options=[
-                            {'label': 'Asintomático', 'value': '0'},
-                            {'label': 'Angina', 'value': '1'},
-                            {'label': 'No anginoso', 'value': '2'}
+                            {'label': 'Angina típica', 'value': '1'},
+                            {'label': 'Angina atípica', 'value': '2'},
+                            {'label': 'No anginoso', 'value': '3'},
+                            {'label': 'Asintomático', 'value': '4'}
                         ],
-                        value='0',
+                        value='',
                         id='chest_pain_type'
                     )
                 ]), width={"size": 3}),
@@ -103,7 +102,7 @@ programa_layout = html.Div(children=[
                             {'label': 'Si', 'value': '1'},
                             {'label': 'No', 'value': '0'}
                         ],
-                        value='0',
+                        value='',
                         id='exercise_induced_angina_yes'
                     )
                 ]), width={"size": 3}),
@@ -118,7 +117,7 @@ programa_layout = html.Div(children=[
                             {'label': 'Normales', 'value': '0'},
                             {'label': 'No normales', 'value': '1'}
                         ],
-                        value='0',
+                        value='',
                         id='resting_ecg_not_normal'
                     )
                 ]), width={"size": 3}),
@@ -127,7 +126,7 @@ programa_layout = html.Div(children=[
                     dcc.Input(
                         type="number",
                         debounce=True,
-                        value='1',
+                        value='',
                         id='ST_depression_exercise_vs_rest'
                     )
                 ]), width={"size": 3}),
@@ -138,7 +137,7 @@ programa_layout = html.Div(children=[
                             {'label': 'Ascendente', 'value': '1'},
                             {'label': 'Plana o descendente', 'value': '0'}
                         ],
-                        value='1',
+                        value='',
                         id='peak_exercise_ST_segment_slope_upsloping'
                     )
                 ]), width={"size": 3},style={'margin-left':'50px'}),
@@ -153,7 +152,7 @@ programa_layout = html.Div(children=[
                             {'label': 'Normal', 'value': '1'},
                             {'label': 'Defectuosa', 'value': '0'}
                         ],
-                        value='1',
+                        value='',
                         id='thallium_stress_test_bf_normal'
                     )
                 ]), width={"size": 3}),
@@ -162,7 +161,7 @@ programa_layout = html.Div(children=[
                     dcc.Input(
                         type="number",
                         debounce=True,
-                        value='1',
+                        value='',
                         id='num_affected_major_vessels'
                     )
                 ]), width={"size": 3}),
