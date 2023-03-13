@@ -5,6 +5,7 @@ from apps import navigation
 from app import app
 import dash_bootstrap_components as dbc
 import dash_daq as daq
+import pandas as pd
 
 programa_layout = html.Div(children=[
     navigation.navbar,
@@ -170,8 +171,10 @@ programa_layout = html.Div(children=[
         ),
 
         # Right hand column containing the summary information for predicted heart disease risk
-        dbc.Col([html.Div("Riesgo previsto de enfermedad cardiaca",
-                          style={'font-weight': 'bold', 'font-size': 20})
+        dbc.Col([
+            html.Div("Riesgo previsto de enfermedad cardiaca",
+                          style={'font-weight': 'bold', 'font-size': 20}),
+            html.Div(id='data_patient')
             ],
             style={'padding': '10px 25px'}
         ),
@@ -191,3 +194,54 @@ programa_layout = html.Div(children=[
     ]
 )
 
+# Responsive element: create X matrix for input to model estimation
+@app.callback(
+    Output('data_patient', 'children'),
+    [Input('age', 'value'),
+     Input('resting_bp', 'value'),
+     Input('serum_cholesterol', 'value'),
+     Input('maximum_hr', 'value'),
+     Input('ST_depression_exercise_vs_rest', 'value'),
+     Input('num_affected_major_vessels', 'value'),
+     Input('sex_male', 'value'),
+     Input('chest_pain_type', 'value'),
+     Input('high_fasting_blood_sugar_no', 'value'),
+     Input('resting_ecg_not_normal', 'value'),
+     Input('exercise_induced_angina_yes', 'value'),
+     Input('peak_exercise_ST_segment_slope_upsloping', 'value'),
+     Input('thallium_stress_test_bf_normal', 'value')
+     ]
+)
+def generate_feature_matrix(age, resting_bp, serum_cholesterol, maximum_hr, ST_depression_exercise_vs_rest,
+                            num_affected_major_vessels, sex_male, chest_pain_type, high_fasting_blood_sugar_no,
+                            resting_ecg_not_normal, exercise_induced_angina_yes,
+                            peak_exercise_ST_segment_slope_upsloping, thallium_stress_test_bf_normal):
+
+    # generate a new X_matrix for use in the predictive models
+    column_names = ['age', 'resting_bp', 'serum_cholesterol', 'maximum_hr', 'ST_depression_exercise_vs_rest',
+                    'num_affected_major_vessels', 'sex_male', 'chest_pain_anginal_pain', 'chest_pain_asymptomatic',
+                    'chest_pain_non_anginal_pain', 'high_fasting_blood_sugar_no', 'resting_ecg_not_normal',
+                    'exercise_induced_angina_yes', 'peak_exercise_ST_segment_slope_upsloping',
+                    'thallium_stress_test_bf_normal']
+
+    # only input that requires additional processing is the chest_pain input
+    chest_pain_anginal_pain = 0
+    chest_pain_asymptomatic = 0
+    chest_pain_non_anginal_pain = 0
+    if chest_pain_type == 0:
+        chest_pain_asymptomatic = 1
+    elif chest_pain_type == 1:
+        chest_pain_anginal_pain = 1
+    elif chest_pain_type == 2:
+        chest_pain_non_anginal_pain = 1
+
+    values = [age, resting_bp, serum_cholesterol, maximum_hr, ST_depression_exercise_vs_rest,
+              num_affected_major_vessels, sex_male, chest_pain_anginal_pain, chest_pain_asymptomatic,
+              chest_pain_non_anginal_pain, high_fasting_blood_sugar_no, resting_ecg_not_normal,
+              exercise_induced_angina_yes, peak_exercise_ST_segment_slope_upsloping, thallium_stress_test_bf_normal]
+
+    x_patient = pd.DataFrame(data=[values],
+                             columns=column_names,
+                             index=[0])
+
+    return x_patient.to_json()
